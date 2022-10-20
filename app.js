@@ -237,25 +237,39 @@ let dishes = [
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
-function problemSix () {
+// function problemSix () {
 
-    let results;
-    results = dishes.filter(function(dish) {
-        if(dish.ingredients.includes("chickpea")) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    })
+//     let results;
+//     results = dishes.filter(function(dish) {
+//         if(dish.ingredients.includes("chickpea")) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
 
-    return results
-}
+//     return results
+// }
 
-let chickPea = problemSix();
-console.log(chickPea)
+// let chickPea = problemSix();
+// console.log(chickPea)
+
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
+
+function problemTwo() {
+    let results;
+    ingredientPrompt = prompt("Please type a desired ingredient")
+    results = dishes.filter(function(dish) {
+        results = dish.ingredients.includes(ingredientPrompt)
+        return results;
+    })
+    
+    return results;
+}       
+let dishIngredient = problemTwo()
+console.log(dishIngredient)
 
 
 
