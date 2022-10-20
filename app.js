@@ -258,25 +258,32 @@ let dishes = [
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
-function problemTwo() {
-    let results;
-    ingredientPrompt = prompt("Please type a desired ingredient")
-    results = dishes.filter(function(dish) {
-        results = dish.ingredients.includes(ingredientPrompt)
-        return results;
-    })
+// function problemTwo() {
+//     let results;
+//     ingredientPrompt = prompt("Please type a desired ingredient")
+//     results = dishes.filter(function(dish) {
+//         results = dish.ingredients.includes(ingredientPrompt)
+//         return results;
+//     })
     
-    return results;
-}       
-let dishIngredient = problemTwo()
-console.log(dishIngredient)
-
-
+//     return results;
+// }       
+// let dishIngredient = problemTwo()
+// console.log(dishIngredient)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEightA () {
 
+    let results = dishes.map(function (element) {
+        return element.cuisine
+    })
+    return results;
+}
+
+let cuisineTypes = problemEightA();
+console.log(cuisineTypes)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
