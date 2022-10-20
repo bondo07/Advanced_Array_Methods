@@ -195,11 +195,31 @@ let dishes = [
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
-function problemFour () {
+// function problemFour () {
+
+//     let results;
+//     results = dishes.filter(function(dish) {
+//         if(dish.id === dish.servings) {
+//             return true;
+//         }
+//         else {
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+
+// let idServingCount = problemFour();
+// console.log(idServingCount)
+
+//5. Create a function that will return only dishes whose serving count is even.
+//Filter
+
+function problemFive () {
 
     let results;
     results = dishes.filter(function(dish) {
-        if(dish.id === dish.servings) {
+        if(dish.servings % 2 === 0) {
             return true;
         }
         else {
@@ -209,13 +229,8 @@ function problemFour () {
     return results;
 }
 
-let idServingCount = problemFour();
-console.log(idServingCount)
-
-//5. Create a function that will return only dishes whose serving count is even.
-//Filter
-
-
+let evenDish = problemFive();
+console.log(evenDish)
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
