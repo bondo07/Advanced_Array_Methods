@@ -302,20 +302,20 @@ let dishes = [
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
-function problemTen () {
+// function problemTen () {
 
-    let results;
-    veggieDishes = dishes.filter(function(dish){
-        return dish.cuisine === "Vegetarian"
-    });
-    results = veggieDishes.map(function(dish) {
-        return `${dish.cuisine} ${dish.name}`
-    })
-    return results;
-}
+//     let results;
+//     veggieDishes = dishes.filter(function(dish){
+//         return dish.cuisine === "Vegetarian"
+//     });
+//     results = veggieDishes.map(function(dish) {
+//         return `${dish.cuisine} ${dish.name}`
+//     })
+//     return results;
+// }
 
-let noMeat = problemTen();
-console.log(noMeat)
+// let noMeat = problemTen();
+// console.log(noMeat)
 
 
 
@@ -326,6 +326,24 @@ console.log(noMeat)
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+
+function problemEleven () {
+
+    let results;
+    results = dishes.filter(function(dish) {
+        if(dish.ingredients.includes("tomato" || "cheese")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results
+}
+
+let cheesyTomatoFood = problemEleven();
+console.log(cheesyTomatoFood)
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
